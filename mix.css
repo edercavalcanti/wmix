@@ -1,0 +1,204 @@
+*{box-sizing: border-box;}
+body{text-align: center;}
+body {background-color: rgb(35, 35, 35);}
+
+.meter {
+  width: 10px; /* Ajuste a largura para ser a largura do medidor */
+  height: 310px; /* Ajuste a altura para sua preferência */
+  background-color: #eee;
+  margin: 5px auto; /* Centraliza o medidor */
+  position: relative; /* Permite que o .meter-level seja absolutamente posicionado dentro */
+}
+
+.meter-level {
+  width: 100%; /* Ocupa toda a largura do medidor */
+  background: linear-gradient(-180deg, #F40000 0%, #EC9500 10%, #BADE09 18%, #429321 45%);
+  height: 0%; /* Inicia sem preenchimento */
+  position: absolute; /* Posiciona em relação ao seu pai .meter */
+  bottom: 0; /* Começa do fundo do .meter */
+}
+
+.vca{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 25px;
+  height: 100%;
+  // position: relative;
+}
+.vca__meter{
+  width: 8px;
+  height: 100%;
+  margin-right: .25rem;
+  background: linear-gradient(-180deg, #F40000 0%, #EC9500 10%, #BADE09 18%, #429321 45%);
+  // position: absolute;
+  // top: 1rem;
+}
+.vca__markers{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
+  font-size: .5rem;
+  color: #808080;
+}
+
+.channel{
+  display: inline-block;
+  width: 100%;
+  max-width: 100px;
+  background: #353434;
+  color: rgba(255,255,255,.9);
+  box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.75);
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.master{
+  display: inline-block;
+  width: 100%;
+  max-width: 150px;
+  background: #1f1f1f;
+  color: rgba(255,255,255,.9);
+  box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.75);
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.bus-control{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: .5rem;
+  
+  .button{
+    flex: 1 1 25px;
+    text-align: center;
+  }
+}
+.button{
+  padding: .55rem;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, rgba(79,79,79,1) 0%,rgba(14,14,14,1) 100%);
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5);
+}
+.bus-control{
+  .button:first-child{
+    margin-right: .25rem;
+  }
+}
+.slider-value{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.slider-value__wrap{
+  min-width: 24px;
+  padding: .25rem;
+  border-radius: 2px;
+  color: #1fcc1f;
+  background: #333;
+  box-shadow: inset 0 0 3px 3px rgba(0,0,0,0.50);
+  font-family: 'VT323', monospace;
+  text-align: center;
+  // font-family: 'Cutive Mono', monospace;
+}
+.slider{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 440px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.fader-track{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: 100%;
+  // position: relative;
+  margin-right: .5rem;
+  
+  
+  &:after{
+    content: "";
+    display: block;
+    width: 4px;
+    height: 100%;
+    background: #131313;
+    // position: absolute;
+    // top: 1rem;
+  }
+}
+.fader{
+  
+
+}
+
+.slider-vertical {
+  -webkit-appearance:none;
+  height: 340px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transform: rotate(-90deg); /* Rotate the slider to vertical */
+  transform-origin: top left; /* Adjust the origin of transformation */
+  position: relative; /* Required for correct positioning of the slider */
+  top: 200px; /* Adjust according to the desired position */
+  left: -160px; /* Adjust according to the desired position */
+  background: linear-gradient(to right, #000000 0%, #000000 100%);
+  background-size:150px 10px;
+  background-position:center;
+  background-repeat:no-repeat;
+   }
+  
+input[type="range"]{
+  -webkit-appearance:none;
+  width:160px;
+  height:20px;
+  margin:10px 50px;
+	transform: rotate(-90deg);
+  background: linear-gradient(to right, #9A2720 0%, #9A2720 100%);
+  background-size:150px 10px;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+  outline: none;
+}
+
+input[type="range"]:first-of-type{
+  margin-top:30px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:20px;
+  height:20px;
+	
+  background:#F26B5E;
+  position:relative;
+  z-index:3;
+  box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+input[type="range"]::-webkit-slider-thumb:after{
+  content:" ";
+  width:160px;
+  height:10px;
+  position:absolute;
+  z-index:1;
+  right:20px;
+  top:5px;
+  background: #ff5b32;
+  background: linear-gradient(to right, #f088fc 1%, #AC6CFF 70%);
+}
+
+p{
+  width:100%;
+  text-align:center;
+  color:white;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Roboto, Arial, Sans-serif;
+  font-size:32px;
+  margin-top:30px;
+}
+
+  
+
+
