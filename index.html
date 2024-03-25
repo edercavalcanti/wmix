@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Lab Mix</title>
+  <meta charset="UTF-8">
+  <title>LiveMix</title>
+  <style>
+
+  </style>
+  <link rel="stylesheet" type="text/css" href="mix.css">
+  <!--<link rel="stylesheet" type="text/css" href="mix2.css"> -->
 </head>
+
 <body>
+  
+
     
+    <!-- canal_1--><div class="channel">
+      <div class="bus-control">
+        <div class="button button--bus">M</div>
+        <div class="button button--bus">S</div>
+      </div>
+      <div class="knob knob--pan"></div>
+      <div class="slider-value">
+        <div class="slider-value__wrap">12</div>
+      </div>
+      <div class="slider">
+        <div class="fader-track">
+          <div class="fader"><input type="range" class="slider-vertical" id="input1Volume" min="-18" max="18" step="0.01" value="2"></div>
+        </div>
+        <div class="vca">
+          <div id="meter1" class="meter">
+          <div class="meter-level"></div>
+          </div>
+          <div class="vca__markers">
+            <div>12</div>
+            <div>6</div>
+            <div>0</div>
+            <div>3</div>
+            <div>6</div>
+            <div>9</div>
+            <div>12</div>
+            <div>15</div>
+            <div>18</div>
+            <div>21</div>
+            <div>24</div>
+            <div>30</div>
+            <div>35</div>
+            <div>40</div>
+            <div>45</div>
+            <div>50</div>
+            <div>60</div>
+          </div>
+        </div>
+      </div>
+      <select id="audioInputSelect1"></select>
+      </div>
+  
+        
+     <!-- canal_2--> <div class="channel">
+          <div class="bus-control">
+            <div class="button button--bus">M</div>
+            <div class="button button--bus">S</div>
+          </div>
+          <div class="knob knob--pan"></div>
+          <div class="slider-value">
+            <div class="slider-value__wrap">12</div>
+          </div>
+          <div class="slider">
+            <div class="fader-track">
+              <div class="fader"><input type="range" class="slider-vertical" id="input2Volume" min="0" max="1" step="0.01" value="0.5"></div>
+        
+              <div class="fader"></div>
+            </div>
+            <div class="vca">
+              <div id="meter2" class="meter">
+              <div class="meter-level"></div>
+              </div>
+              <div class="vca__markers">
+                <div>12</div>
+                <div>6</div>
+                <div>0</div>
+                <div>3</div>
+                <div>6</div>
+                <div>9</div>
+                <div>12</div>
+                <div>15</div>
+                <div>18</div>
+                <div>21</div>
+                <div>24</div>
+                <div>30</div>
+                <div>35</div>
+                <div>40</div>
+                <div>45</div>
+                <div>50</div>
+                <div>60</div>
+              </div>
+            </div>
+          </div>
+          <select id="audioInputSelect2"></select>
+      </div>
+
+     <!-- canal_Master--> <div class="master">
+      <div class="bus-control">
+        <div class="button button--bus">M</div>
+        <div class="button button--bus">S</div>
+      </div>
+      <div class="knob knob--pan"></div>
+      <div class="slider-value">
+        <div class="slider-value__wrap">12</div>
+      </div>
+      <div class="slider">
+        <div class="fader-track">
+          <div class="fader"><input type="range" class="slider-vertical" id="mastervolume" min="0" max="1" step="0.01" value="0.5"></div>
+        
+          <div class="fader"></div>
+        </div>
+        <div class="vca">
+          <div id="masterMeter" class="meter">
+          <div class="meter-level"></div>
+          </div>
+          <div class="vca__markers">
+            <div>12</div>
+            <div>6</div>
+            <div>0</div>
+            <div>3</div>
+            <div>6</div>
+            <div>9</div>
+            <div>12</div>
+            <div>15</div>
+            <div>18</div>
+            <div>21</div>
+            <div>24</div>
+            <div>30</div>
+            <div>35</div>
+            <div>40</div>
+            <div>45</div>
+            <div>50</div>
+            <div>60</div>
+          </div>
+        </div>
+      </div>
+      <button id="startAudio">Iniciar Áudio</button>
+  </div>
+  <script type="text/javascript" src="app.js"></script>
+  <script>
+
+
+
+  </script>
 </body>
+
 </html>
